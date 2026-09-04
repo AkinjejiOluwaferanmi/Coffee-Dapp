@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+
+# Environment / secrets
+.env
+.env.local
+.env.*.local
+
+# Build output
+dist/
+build/
+.next/
+out/
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# Editor / IDE
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Local/generated project state
+anvil-state.json
+
+constants-js.js
+constants-ts.js
+index-js.js
+index-ts.js

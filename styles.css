@@ -1,0 +1,255 @@
+/* ============================================
+   Buy Me a Coffee Dapp — styles
+   ============================================ */
+
+:root {
+  --bg-gradient-start: #1a1423;
+  --bg-gradient-end: #2d1e3f;
+  --card-bg: #ffffff;
+  --accent: #f5a623;
+  --accent-dark: #d4890f;
+  --accent-light: #ffd699;
+  --text-dark: #2a1f3d;
+  --text-muted: #6b6377;
+  --danger: #e35d5d;
+  --danger-dark: #c94a4a;
+  --success: #3fb27f;
+  --radius: 16px;
+  --shadow: 0 20px 40px rgba(26, 20, 35, 0.25);
+  --font: 'Segoe UI', 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font);
+  background: radial-gradient(circle at top left, var(--bg-gradient-end), var(--bg-gradient-start) 70%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  color: var(--text-dark);
+}
+
+/* Card container wrapping the whole dapp */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(245, 166, 35, 0.08), transparent 40%),
+    radial-gradient(circle at 80% 80%, rgba(245, 166, 35, 0.06), transparent 40%);
+  pointer-events: none;
+}
+
+body {
+  position: relative;
+}
+
+body > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Turn the body's flow into a centered card using a wrapper look via body itself */
+body {
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Buttons */
+button {
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 22px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.2s ease;
+  margin: 6px 4px;
+}
+
+button:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+button:focus-visible {
+  outline: 3px solid var(--accent-light);
+  outline-offset: 2px;
+}
+
+#connectButton {
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+  color: #1a1423;
+  box-shadow: 0 6px 16px rgba(245, 166, 35, 0.35);
+}
+
+#connectButton:hover {
+  box-shadow: 0 8px 20px rgba(245, 166, 35, 0.5);
+  transform: translateY(-2px);
+}
+
+#balanceButton {
+  background: #f2eefc;
+  color: var(--text-dark);
+  border: 1px solid #ddd3f0;
+}
+
+#balanceButton:hover {
+  background: #e6dcfb;
+}
+
+#fundButton {
+  background: linear-gradient(135deg, var(--success), #2f9268);
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(63, 178, 127, 0.35);
+  width: 100%;
+  padding: 14px 22px;
+  font-size: 16px;
+}
+
+#fundButton:hover {
+  box-shadow: 0 8px 20px rgba(63, 178, 127, 0.5);
+  transform: translateY(-2px);
+}
+
+#withdrawButton {
+  background: linear-gradient(135deg, var(--danger), var(--danger-dark));
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(227, 93, 93, 0.3);
+}
+
+#withdrawButton:hover {
+  box-shadow: 0 8px 20px rgba(227, 93, 93, 0.45);
+  transform: translateY(-2px);
+}
+
+/* Label + input */
+label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 18px 0 6px;
+}
+
+input#ethAmount {
+  width: 100%;
+  padding: 14px 16px;
+  font-size: 16px;
+  font-family: inherit;
+  border: 1.5px solid #e3ddef;
+  border-radius: 10px;
+  background: #faf9fd;
+  color: var(--text-dark);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+input#ethAmount::placeholder {
+  color: #b8b0c9;
+}
+
+input#ethAmount:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px rgba(245, 166, 35, 0.15);
+}
+
+/* ============================================
+   Layout — wraps body content into a card look
+   ============================================ */
+body {
+  background-attachment: fixed;
+}
+
+/* Since there's no wrapper div in the HTML, style body as the card itself
+   for a quick win — but for best results, wrap your content in
+   <div class="card"> and use the .card rules below instead. */
+
+/* @media (min-width: 480px) {
+  .card {
+    max-width: 420px;
+    margin: 60px auto;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 36px 32px 40px;
+  }
+
+  .card::after {
+    display: block;
+    order: -1;
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-bottom: 22px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 479px) {
+  .card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 28px 20px 32px;
+    margin: 0 auto;
+  }
+} */
+
+/* Optional: recommended markup upgrade for a true card layout
+   ------------------------------------------------------------
+   <body>
+     <div class="card">
+       <h1 class="title">☕ Buy Me a Coffee</h1>
+       <div class="wallet-actions">...connect/balance buttons...</div>
+       <div class="fund-form">...label/input/fund button...</div>
+       <button id="withdrawButton" class="owner-only">Withdraw</button>
+     </div>
+   </body>
+   If you switch to this structure, use the .card/.title/.wallet-actions/
+   .fund-form rules below instead of the body-as-card hack above. */
+
+.card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 36px 32px 40px;
+  max-width: 420px;
+  width: 100%;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 800;
+  text-align: center;
+  margin: 0 0 24px;
+  color: var(--text-dark);
+}
+
+.wallet-actions {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee6fa;
+}
+
+.fund-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.owner-only {
+  width: 100%;
+  margin-top: 22px;
+}

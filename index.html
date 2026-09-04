@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buy me a Coffee</title>
+    <script src="index-ts.ts" type="module"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="card">
+      <h1 class="title">☕ Buy Me a Coffee</h1>
+      <div class="wallet-actions">
+        <button id="connectButton">Connect Wallet</button>
+        <button id="balanceButton">Get Balance</button>
+      </div>
+      <!-- form to "Buy coffee" or "fund function" -->
+      <div class="fund-form">
+        <label for="ethAmount">ETH Amount</label>
+        <input id="ethAmount" placeholder="0.01" />
+        <button id="fundButton" type="button">Buy Coffee</button>
+      </div>
+      <button id="withdrawButton" class="owner-only">Withdraw</button>
+    </div>
+  </body>
+</html>
