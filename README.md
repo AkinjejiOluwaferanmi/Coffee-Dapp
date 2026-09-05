@@ -46,7 +46,7 @@ Built with [Foundry](https://book.getfoundry.sh/) for the contract side and [Vit
 ├── styles.css          # Application styles
 ├── tsconfig.json       # TypeScript configuration
 └── README.md           # Project documentation
-
+```
 
 ---
 
@@ -221,4 +221,4 @@ MIT
 
 **Akinjeji Oluwaferanmi**
 
-This was my first full dapp — smart contract, tests, deployment scripts, and a working TypeScript frontend wired up end-to-end with viem. 🎉
+This was my first full dapp — smart contract, tests, deployment scripts, and a working TypeScript frontend wired up end-to-end with viem.
