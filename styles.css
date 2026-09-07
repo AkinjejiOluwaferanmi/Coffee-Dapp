@@ -169,54 +169,6 @@ body {
   background-attachment: fixed;
 }
 
-/* Since there's no wrapper div in the HTML, style body as the card itself
-   for a quick win — but for best results, wrap your content in
-   <div class="card"> and use the .card rules below instead. */
-
-/* @media (min-width: 480px) {
-  .card {
-    max-width: 420px;
-    margin: 60px auto;
-    background: var(--card-bg);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-    padding: 36px 32px 40px;
-  }
-
-  .card::after {
-    display: block;
-    order: -1;
-    font-size: 22px;
-    font-weight: 800;
-    color: var(--text-dark);
-    margin-bottom: 22px;
-    text-align: center;
-  }
-}
-
-@media (max-width: 479px) {
-  .card {
-    background: var(--card-bg);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-    padding: 28px 20px 32px;
-    margin: 0 auto;
-  }
-} */
-
-/* Optional: recommended markup upgrade for a true card layout
-   ------------------------------------------------------------
-   <body>
-     <div class="card">
-       <h1 class="title">☕ Buy Me a Coffee</h1>
-       <div class="wallet-actions">...connect/balance buttons...</div>
-       <div class="fund-form">...label/input/fund button...</div>
-       <button id="withdrawButton" class="owner-only">Withdraw</button>
-     </div>
-   </body>
-   If you switch to this structure, use the .card/.title/.wallet-actions/
-   .fund-form rules below instead of the body-as-card hack above. */
-
 .card {
   background: var(--card-bg);
   border-radius: var(--radius);
